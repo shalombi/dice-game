@@ -80,15 +80,15 @@ btnHold.addEventListener('click', function () {
     scores[activePlayer] = scores[activePlayer] + currentScore; //הוספת הניקוד לניקוד הכללי של כל משתמש//הניקוד הכללי של כל משתמש מאוחסן ברשימה שנקראית סקורס
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer]; //מציג את  הניקוד הניקוד שהצטבר לשחקן
-    // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 8) {
+    // 2. Check if player's score is >= 20
+    if (scores[activePlayer] >= 20) {
       //Finish the game
       playing = false;
       diceEl.classList.remove('hidden'); //ברגע שהשחקן מנצח נדאג להסתיר את הקוביה
       //mark the winner
       document
         .querySelector(`.player--${activePlayer}`)
-        .classList.add('player--winner'); //נקבע את הרקע של השחקן שיש לו מעל 100 נקודות ברקע שהגדרנו לשחקן המנצח (כי יש לו מעל 100 נקודות ולכן הוא מנצח)
+        .classList.add('player--winner'); //נקבע את הרקע של השחקן שיש לו מעל 20 נקודות ברקע שהגדרנו לשחקן המנצח (כי יש לו מעל 20 נקודות ולכן הוא מנצח)
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('.player--active'); //נסיר את הרקע  של אקטיב-פלייר על מנת שנוכל לראות את הרקע של השחקן המנצח
