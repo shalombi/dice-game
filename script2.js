@@ -80,7 +80,7 @@ btnHold.addEventListener('click', function () {
     scores[activePlayer] = scores[activePlayer] + currentScore; //הוספת הניקוד לניקוד הכללי של כל משתמש//הניקוד הכללי של כל משתמש מאוחסן ברשימה שנקראית סקורס
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer]; //מציג את  הניקוד הניקוד שהצטבר לשחקן
-    // 2. Check if player's score is >= 20
+    // 2. Check if player's score is >= 100
     if (scores[activePlayer] >= 20) {
       //Finish the game
       playing = false;
@@ -93,7 +93,7 @@ btnHold.addEventListener('click', function () {
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('.player--active'); //נסיר את הרקע  של אקטיב-פלייר על מנת שנוכל לראות את הרקע של השחקן המנצח
     } else {
-      //אם לשחקן אין 100 נקודות
+      //אם לשחקן אין 20 נקודות
       switchPlayerFun(); //תחליף את התור בין השחקנים (כולל כל ההגדרות הנלוות)
     }
   }
